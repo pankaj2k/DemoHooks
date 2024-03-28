@@ -63,7 +63,7 @@ function App() {
       <button onClick={handle}>Clike Here...</button> */}
 
       {/* Sending data from parent to child using props */}
-      {/* <Child name={name} /> */}
+      <Child name={name} />
 
       {/* Props Drilling Example  */}
       <ChildA name={propsDrillingValue} />
