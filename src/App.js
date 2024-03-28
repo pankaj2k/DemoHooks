@@ -7,10 +7,12 @@ import Child1 from './contextAPI/Child1';
 import Comment from './useState/Comment';
 import Event from './useEffect/Event';
 import ComponentA from './useContext/ComponentA';
+import ShowCounter from './redux/ShowCounter';
 
 //Connect the redux
 import { Provider } from 'react-redux';
-import store from './reduxContainer/store';
+// import store from './reduxContainer/store';
+import store from './redux/store';
 
 
 const data1 = createContext();
@@ -54,7 +56,6 @@ function App() {
       //wrap all code with provider
   <Provider store={store}>
     <>
-      
       {/* JSX Example  */}
       {/* <h1 className='test'>This is normal {appName}</h1>
       <h1>User name is {user.name}</h1>
@@ -63,10 +64,10 @@ function App() {
       <button onClick={handle}>Clike Here...</button> */}
 
       {/* Sending data from parent to child using props */}
-      <Child name={name} />
+      {/*<Child name={name} />*/}
 
       {/* Props Drilling Example  */}
-      <ChildA name={propsDrillingValue} />
+      {/* <ChildA name={propsDrillingValue} /> */}
 
       {/* ContextAPI Example  */}
       {/* <data3.Provider value={ContextAPIValue1}>
@@ -76,7 +77,7 @@ function App() {
       </data3.Provider> */}
 
       {/* useState Example  */}
-      {/* <Comment></Comment> */}
+      <Comment></Comment>
 
       {/* useEffect Example  */}
       {/* <Event></Event> */}
@@ -91,6 +92,7 @@ function App() {
 
 
       {/* <BookContainer /> */}
+      <ShowCounter></ShowCounter>
     </> 
     </Provider>
   );
